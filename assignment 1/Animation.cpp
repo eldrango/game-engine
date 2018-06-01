@@ -37,11 +37,11 @@ void Animation::update(float dt) {
 
 	}
 }
-void Animation::draw(int x, int y) {
+void Animation::draw(int x, int y, int yOffset) {
 	//get current frame clipping region
 	SDL_Rect clip;
 	clip.x = this->x + currentFrame * frameWidth;
-	clip.y = this->y;
+	clip.y = this->y + yOffset;
 	clip.w = frameWidth;
 	clip.h = frameHeight;
 	//setup where frame will be drawn
@@ -49,11 +49,12 @@ void Animation::draw(int x, int y) {
 	//draw
 	SDL_RenderCopy(renderer, spriteSheet, &clip, &dest);
 }
-void Animation::draw(int x, int y, float scale) {
+
+void Animation::draw(int x, int y, float scale, int yOffset) {
 	//get current frame clipping region
 	SDL_Rect clip;
 	clip.x = this->x + currentFrame * frameWidth;
-	clip.y = this->y;
+	clip.y = this->y + yOffset;
 	clip.w = frameWidth;
 	clip.h = frameHeight;
 	//setup where frame will be drawn
@@ -61,11 +62,12 @@ void Animation::draw(int x, int y, float scale) {
 	//draw
 	SDL_RenderCopy(renderer, spriteSheet, &clip, &dest);
 }
-void Animation::draw(int x, int y, bool flip) {
+
+void Animation::draw(int x, int y, bool flip, int yOffset) {
 	//get current frame clipping region
 	SDL_Rect clip;
 	clip.x = this->x + currentFrame * frameWidth;
-	clip.y = this->y;
+	clip.y = this->y + yOffset;
 	clip.w = frameWidth;
 	clip.h = frameHeight;
 	//setup where frame will be drawn

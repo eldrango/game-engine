@@ -1,1 +1,19 @@
-﻿  assignment 1.vcxproj -> C:\Users\eldrango\source\repos\assignment 1\Debug\assignment 1.exe
+﻿  Animation.cpp
+c:\users\eldrango\source\repos\assignment 1\assignment 1\animation.cpp(61): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\eldrango\source\repos\assignment 1\assignment 1\animation.cpp(61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  hero.cpp
+c:\users\eldrango\source\repos\assignment 1\assignment 1\hero.cpp(58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\eldrango\source\repos\assignment 1\assignment 1\hero.cpp(62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  inputHandler.cpp
+  keyboardHandler.cpp
+  mouseHandler.cpp
+c:\users\eldrango\source\repos\assignment 1\assignment 1\mousehandler.cpp(35): warning C4244: '=': conversion from 'Sint32' to 'float', possible loss of data
+c:\users\eldrango\source\repos\assignment 1\assignment 1\mousehandler.cpp(36): warning C4244: '=': conversion from 'Sint32' to 'float', possible loss of data
+  Source.cpp
+c:\users\eldrango\source\repos\assignment 1\assignment 1\source.cpp(158): warning C4551: function call missing argument list
+c:\users\eldrango\source\repos\assignment 1\assignment 1\source.cpp(159): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\eldrango\source\repos\assignment 1\assignment 1\source.cpp(174): warning C4551: function call missing argument list
+c:\users\eldrango\source\repos\assignment 1\assignment 1\source.cpp(175): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\eldrango\source\repos\assignment 1\assignment 1\source.cpp(201): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  assignment 1.vcxproj -> C:\Users\eldrango\source\repos\assignment 1\Debug\assignment 1.exe

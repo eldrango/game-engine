@@ -156,7 +156,7 @@ int main(int argc, char **argv)
 
 	SDL_Texture* toon = SDL_CreateTextureFromSurface(renderer, toonSurface);
 	SDL_FreeSurface;
-	anim1 = new Animation(toon, renderer, 3, 0, 30, 28, 30, 0.2);
+	anim1 = new Animation(toon, renderer, 3, 0, 0, 28, 30, 0.2);
 	Hero* hero = new Hero();
 	hero->setAnimation(anim1);
 	hero->setRenderer(renderer);
@@ -172,7 +172,7 @@ int main(int argc, char **argv)
 	SDL_SetColorKey(toonSurface2, 1, SDL_MapRGB(toonSurface2->format, 125, 2, 73));
 	SDL_Texture* toon2 = SDL_CreateTextureFromSurface(renderer, toonSurface2);
 	SDL_FreeSurface;
-	anim2 = new Animation(toon2, renderer, 3, 0, 30, 28, 30, 0.2);
+	anim2 = new Animation(toon2, renderer, 3, 0, 0, 28, 30, 0.2);
 	Hero* hero2 = new Hero();
 	
 	hero2->setAnimation(anim2);
@@ -206,13 +206,15 @@ int main(int argc, char **argv)
 		SDL_RenderCopy(renderer, exit, NULL, &exitDest);
 		
 
-		//toonSprite.x = toonSprite.w*int((SDL_GetTicks() / 100) % 5);
 		
 		//loop through and update and draw all entities
 		for (list<Entity*>::iterator eIt = entities.begin(); eIt != entities.end(); eIt++) {
 			(*eIt)->update(DT);
 			(*eIt)->draw();
 		}
+		if (hero->pos.y >= 346)
+			hero->setJump();
+
 		while (SDL_PollEvent(&e))
 		{
 			//check if user has clicked on the close window button

@@ -1,5 +1,7 @@
 #pragma once
 #include <SDL.h>
+
+
 class Animation
 {
 public:
@@ -18,8 +20,8 @@ public:
 
 	Animation(SDL_Texture* spriteSheet, SDL_Renderer* renderer, int numberOfFrames, int spriteX, int spriteY, int frameWidth, int frameHeight, float frameDuration);
 	void update(float dt);
-	void draw(int x, int y);
-	void draw(int x, int y, float scale);
-	void draw(int x, int y, bool flip);
+	void draw(int x, int y, int yOffset);
+	void draw(int x, int y, float scale, int yOffset);
+	void draw(int x, int y, bool flip, int yOffset);
 };
 
